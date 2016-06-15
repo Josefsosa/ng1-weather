@@ -1,0 +1,101 @@
+.range {
+    position: relative;
+
+    input[type="range"] {
+        -webkit-appearance: none;
+        margin: 0 0 @range-thumb-height/2;
+        padding: 0;
+        width: @range-track-width;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-slider-runnable-track {
+            .range-track();
+            background: @range-track-color;
+            border-radius: @range-track-radius;
+            border: @range-track-border-width solid @range-track-border-color;
+        }
+
+        &::-webkit-slider-thumb {
+            .range-thumb();
+            -webkit-appearance: none;
+            margin-top: ((-@range-track-border-width * 2 + @range-track-height) / 2) - (@range-thumb-height / 2);
+        }
+
+        &:focus::-webkit-slider-runnable-track {
+            background: lighten(@range-track-color, @range-contrast);
+        }
+
+        &::-moz-range-track {
+            .range-track();
+            background: @range-track-color;
+            border-radius: @range-track-radius;
+            border: @range-track-border-width solid @range-track-border-color;
+        }
+        &::-moz-range-thumb {
+            .range-thumb();
+        }
+
+        &::-ms-track {
+            .range-track(); 
+            background: transparent;
+            border-color: transparent;
+            border-width: @range-thumb-width 0;
+            color: transparent;
+        }
+
+        &::-ms-fill-lower {
+            background: darken(@range-track-color, @range-contrast);
+            border: @range-track-border-width solid @range-track-border-color;
+            border-radius: @range-track-radius*2;
+        }
+        &::-ms-fill-upper {
+            background: @range-track-color;
+            border: @range-track-border-width solid @range-track-border-color;
+            border-radius: @range-track-radius*2;
+        }
+        &::-ms-thumb {
+            .range-thumb();
+        }
+        &:focus::-ms-fill-lower {
+            background: @range-track-color;
+        }
+        &:focus::-ms-fill-upper {
+            background: lighten(@range-track-color, @range-contrast);
+        }
+    }
+
+    table {
+        max-width: 100%;
+        table-layout: fixed;
+        width: 100%;
+
+        thead {
+            background-color: @gray-lighter;
+            margin-top: -25px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        tbody {
+            position: relative;
+            z-index: 2;
+
+            td {
+                border-top: 0 none;
+                line-height: inherit;
+                padding: 0;
+                text-align: center;
+                vertical-align: middle;
+    
+                &.range-td-wrapper {
+                    padding: 0 4%;
+                }
+            }
+        }
+    }
+}

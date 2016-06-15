@@ -1,0 +1,45 @@
+.co-checkbox {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin-right: 10px;
+
+	input[type="checkbox"] {
+		width: 25px;
+		height: 25px;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		z-index: 1;
+		.opacity(0);
+
+		& + .checkbox {
+			display: inline-block;
+			position: relative;
+			z-index: 0;
+			width: 25px;
+			height: 25px;
+			background-color: @gray-light;
+			text-align: center;
+			margin: 0;
+
+			i {
+				display: none;
+				float: left;
+				color: @white;
+				margin-left: 5px;
+				font-size: 16px;
+				.vertical-center();
+			}
+		}
+
+		&:checked + .checkbox {
+			background: @brand-magenta;
+
+			i {
+				display: inline-block;
+			}
+		}
+	}
+
+}

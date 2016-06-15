@@ -1,0 +1,57 @@
+.co-toggle {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.co-toggle input[type="checkbox"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	.opacity(0);
+	padding: 0;
+	margin: 0;
+	width: 45px;
+	height: 23px;
+}
+
+.co-toggle input[type="checkbox"] + .switch {
+	display: inline-block;
+	position: relative;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 45px;
+	height: 23px;
+	.rounded(16px);
+	background: @gray-light;
+	border: 1px @gray-light solid;
+}
+
+.co-toggle input[type="checkbox"] + .switch:after {
+	content: "";
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: none repeat scroll 0 0 @white;
+	.rounded(11px);
+	.transition(left 0.1s ease-out);
+	margin: 0;
+	padding: 0;
+}
+
+.co-toggle input[type="checkbox"]:checked + .switch {
+	background: @brand-magenta;
+	border-color: @brand-magenta;
+}
+
+.co-toggle input[type="checkbox"]:checked + .switch:after {
+	left: 22px;
+}

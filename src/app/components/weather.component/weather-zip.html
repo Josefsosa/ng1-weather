@@ -1,0 +1,51 @@
+<div>The weather Directive</div>
+<div id="weather-city-locator">
+  <div ng-controller="weatherCtrl">
+
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 form-group">
+        <div class="input-group">
+          <form>
+            <input class="form-control" type="search" ng-model="cityName" placeholder="insert city Name, eg: Chicago" />
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="addWeather(cityName)">Add City</button>
+            </span>
+          </form>
+        </div>
+        <div class="switch">
+          °F <input type="checkbox" ng-model="checked">
+        </div>
+    </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-3" ng-repeat="place in places">
+
+          <div class="singleview">
+          <a ui-sref="weatherCityLocatorDetail({ cityId : place.id })"> <h1 class="city">{{ place.name }}, {{ place.sys.country }}</h1></a>
+
+
+          <div class="row" style="text-align: center">
+            <span class="id-label">({{ place.id}})</span><br>
+
+            <span class="subheader">current weather</span><br>
+          <img src="images/{{place.weather[0].icon}}.png" style="text-align:center;"><br>
+
+          <h1 class="temp"  ng-hide="checked">{{ place.main.temp| kelvinToCelsius | number:1 }}°C</h1>
+          <h1 class="temp" ng-hide="!checked">{{place.main.temp | kelvinToCelsius | toFarenheit | number:1}}°F</h1>
+
+          <span class="subheader">{{ place.weather[0].main }} </span><br>
+            <span class="subheader">{{ place.weather[0].description }} </span><br>
+
+          </div>
+          <br><br>
+          <a ng-click='removePlace($index)' class="button-remove">
+            remove
+          </a> <a ui-sref="weatherCityLocatorDetail({ cityId : place.id })">Detailed View</a><br>  <!--ui-sref="weatherCityLocatorDetail({ id:{{$index}} })"-->
+          </div>
+
+        </div>
+
+      </div>
+  </div>
+
+</div>

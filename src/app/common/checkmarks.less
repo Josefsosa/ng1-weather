@@ -1,0 +1,33 @@
+.co-checkmark {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	width: 23px;
+	height: 23px;
+	background: url("@{common-path}/images/mega-icon-sprite.png") no-repeat scroll -299px 1px transparent;
+}
+
+.co-checkmark.stroke {
+	.rounded(11px);
+	background-position: -300px 0px;
+	border: 1px @brand-magenta solid;
+}
+
+.co-checkmark.stroke.success {
+	background-position: -257px 0px;
+	border-color: @green;
+}
+
+.co-checkmark.stroke.fail {
+	background-position: -339px 0px;
+	border-color: @brand-magenta;
+}
+
+.co-checkmark.stroke.error {
+	background-position: -368px 0px;
+	border-color: @red;
+}
+
+.co-checkmark.stroke.white {
+	border-color: @white;
+}

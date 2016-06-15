@@ -1,0 +1,60 @@
+// White Dropdown selec component
+
+.white-select {
+
+	padding: 0;
+
+	&:first-of-type {
+		padding-left: 15px;
+
+		.select2-container .select2-choice { 
+			border-left: 0;
+		}
+	}
+
+	&:last-of-type {
+		padding-right: 15px;
+
+		.select2-container .select2-choice .select2-arrow {
+			width: 41px; 
+		}
+	}
+
+	.select2-dropdown-open {
+		outline: none;
+	}
+
+	.select2-container .select2-choice {
+
+		background-color: @white;
+		border-top: 1px solid @item-border;
+		border-bottom: 1px solid @item-border;
+		border-left: 1px solid @item-border;
+		height: 54px;
+		line-height: 54px;
+		padding-left: 12px;
+
+		&.with-icon {
+			padding-left: 4px;
+		}
+
+		.select2-chosen {
+		}
+
+		.co-icon {
+			margin-right: 5px;
+			margin-top: -3px;
+		}
+
+		.select2-arrow {
+			border: 0;
+			padding: 4px 0 0;
+			width: 34px;
+			line-height: 32px;
+		}
+	}
+
+	.select2-drop-active {
+		background-color: @white;
+	}
+}

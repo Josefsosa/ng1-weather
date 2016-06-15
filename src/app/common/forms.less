@@ -1,0 +1,256 @@
+.top-desc {
+	margin-bottom: 60px;
+	margin-top:10px;
+	
+	& p {
+		width:75%;
+	}
+}
+
+.forms {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: @font-size-small;
+}
+
+.form-control {
+	.box-shadow(none);
+	.rounded(0);
+	background-color: @gray-lighter;
+	border: 0 none;
+	color: @gray-dark;
+	font-size: @font-size-small;
+	height: 45px;
+	padding: 0 16px;
+	width: 100%;
+
+	&:focus {
+		.box-shadow(none);
+		outline: @gray-dark solid 1px;
+	}
+
+	&[disabled] {
+		color: @gray-light;
+		&::-webkit-input-placeholder { color: @gray-light;	}
+		&:-moz-placeholder { color: @gray-light; }
+		&::-moz-placeholder { color: @gray-light; }
+		&:-ms-input-placeholder { color: @gray-light; }
+		background-color: @gray-lighter;
+	}
+
+	&::-webkit-input-placeholder { color: @gray;	}
+	&:-moz-placeholder { color: @gray; }
+	&::-moz-placeholder { color: @gray; }
+	&:-ms-input-placeholder { color: @gray; }
+
+	&.error {
+		color: @red;
+		border: 1px solid @red;
+		outline: 0;
+
+		&::-webkit-input-placeholder { color: @red;	}
+		&:-moz-placeholder { color: @red; }
+		&::-moz-placeholder { color: @red; }
+		&:-ms-input-placeholder { color: @red; }
+	}
+
+	&.input-small {
+		height: 40px;
+	}
+
+	&.form-white {
+		background-color: @white;
+		border: 1px solid @gray;
+	}
+
+	@media @screen-sm {
+		//font-size: @font-size-small-768;
+	}
+
+	@media @screen-xs {
+		font-size: @font-size-small-below-768;
+	}
+}
+
+.on-magenta{
+	.form-control {
+		background-color: @white;
+	}
+}
+
+.input-group-addon {
+	.box-shadow(none);
+	background-color: @gray-lighter;
+	.rounded(0);
+	border: 0 none;
+	color: @gray-dark;
+
+    .border {
+        border-left: 1px solid @item-border;
+        line-height: 40px;
+        width: 43px;
+        text-align: right;
+        padding-right: 3px;
+    }
+}
+
+.form-group {
+	margin-bottom: 25px;
+	margin-top: 0;
+	
+	& label {
+		font-weight: normal;
+	}
+}
+
+.form-group-relative {
+	position: relative;
+}
+
+.form-group-centered {
+	text-align: center;
+	margin:1em 0;
+	
+	& button {
+		width: 80%;
+	}
+}
+
+.half-width {
+	width: 50%;
+}
+
+.icon-snap-pic {
+	margin-right: 1em;
+	margin-bottom: 1em;
+	border-right: 1px solid #ddd;
+	padding-right: 2.9em;
+	padding-bottom: 2.6em;
+}
+
+.form-control-feedback  {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    right: 0;
+    top: 30px;
+    width: 25px;
+}
+
+.form-login {
+	color: @white;
+	background-color: @brand-magenta;
+	padding:1em;
+
+	& a {
+		color: @white;
+	}
+
+	& .form-control {
+		background-color: @brand-magenta;
+		border: 1px solid @gray;
+        .rounded(0);
+        .box-shadow(none);
+		color: @white;
+		height: 65px;
+		line-height: 1.42857;
+		padding: 6px 12px;
+		width: 100%;
+	}
+
+	& .checkbox {
+		border: 1px solid @gray;
+	}
+}
+
+// Custom select
+.select2-container { // normal state
+	width: 100%;
+
+	.select2-choice {
+		.rounded(0);
+		background: @gray-lighter;
+		border: 0 none;
+		color: @black;
+		height: 45px;
+		line-height: 45px;
+		padding: 0 0 0 16px;
+		font-size: @font-size-small;
+
+		&.select2-default {
+			color: @gray !important;
+		}
+
+		> .select2-chosen {
+			margin-right: 50px;
+		}
+
+		.select2-arrow {
+			background: none;
+			border-left-color: @gray-dark;
+			height: 25px;
+			line-height: 25px;
+			padding: 0;
+			text-align: center;
+			top: 10px;
+			width: 50px;
+			.rounded(0);
+
+			i.open {
+				color: @brand-magenta;
+			}
+		}
+
+		@media @screen-sm {
+			//font-size: @font-size-small-768;
+		}
+
+		@media @screen-xs {
+			font-size: @font-size-small-below-768;
+		}
+	}
+}
+
+.select2-dropdown-open { // as the class says: select open state
+	//outline: @gray-dark solid 1px;
+
+	.select2-choice {
+
+		.select2-arrow {
+			border-left: 1px solid @gray-dark;
+
+			b {
+				height: 10px;
+				width: 15px;                
+			}
+		}
+	}
+}
+
+.select2-drop-active { // custom select options box
+	background: @gray-lighter;
+	border-top: none;
+	border: 0;
+	border-top: 1px solid @black;
+	color: @gray-dark;
+	font-size: 14px;
+}
+
+.select2-results {
+	margin: 10px 0;
+	padding: 0;
+
+	.select2-highlighted {
+		background-color: transparent;
+		color: @brand-magenta;
+	}
+
+	.select2-result-label {
+		padding: 5px 16px;
+	}
+}
+
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	background-image: none;
+}

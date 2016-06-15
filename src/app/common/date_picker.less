@@ -1,0 +1,99 @@
+.date-picker {	
+
+	.form-control {
+		padding-right: 0;
+
+		&[disabled] {
+			background-color: @gray-lighter;
+			color: @gray-lighter;			
+		}
+	}
+	
+	.input-group-addon {
+		padding: 0;
+
+		i {
+			width: 50px;
+		}
+
+		&.disabled {
+			cursor: not-allowed;
+
+			i {
+				.opacity(0.5);
+			}
+		}
+	}	
+
+	.dropdown-menu {
+		border-radius: 0;
+		border-color: @black;
+		padding: 0 8px;
+
+		small {
+			color: @black;
+		}
+
+		table:focus {
+			outline: 0;
+		}
+
+		.glyphicon {
+			font-weight: normal;
+		}		
+
+		.btn-default {
+			background-color: #ffffff; 
+			color: #e20074; 
+		}
+		
+		.btn {
+			border: 0;
+			color: @black; 
+			font-family: inherit; 
+			font-size: inherit; 
+			font-weight: inherit; 
+			height: inherit; 
+			line-height: 1; 
+			min-width: inherit; 
+			padding: 9px 5px;
+			width: auto;			
+		}
+
+		td .btn {
+			color: @brand-magenta;
+			padding: 7px;
+
+			.text-info {
+				color: @brand-magenta;
+			}
+
+			.text-muted {
+				color: @gray-light;
+			}
+
+			&:disabled {
+				color: @black;
+			}		
+
+			&.active {
+				border-radius: 0;
+				color: @white;
+				background-color: @brand-magenta;
+				.box-shadow(none);
+
+				.text-info {
+					color: @white;
+				}
+			}
+		}
+	}
+
+	&.form-white {
+		
+		.form-control, .input-group-addon {
+			background-color: @white;
+		}
+	}
+
+}

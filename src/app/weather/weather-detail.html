@@ -1,0 +1,51 @@
+<div>
+  <acme-navbar></acme-navbar>
+</div>
+<div class="container weathercard">
+  <div id="weather-city-locator">
+    <div ng-controller="WeatherDetailController as wdc">
+      <a ui-sref="weather"> Back to Dashboard</a>
+      <div class="switch">
+        °F <input type="checkbox" ng-model="checked">
+      </div>
+      <div class="singleview">
+        <div class="row" style="padding-left: 20px;">
+          <h1 class="city detail">{{ place.name }}, {{ place.sys.country }}</h1>
+          <h3>Current Weather</h3>
+          <div class="col-md-6">
+            <img src="assets//images/{{place.weather[0].icon}}.png"  style="text-align:center;"><br>
+            <span class="subheader">Cloud status: {{ place.weather[0].main }} </span><br>
+            <span class="subheader">{{ place.weather[0].description }} </span><br>
+            <br><span class="subheader"> Humidity: {{place.main.humidity}}%</span>
+          </div>
+          <div class="col-md-6">
+            <h1 class="temp detail" ng-hide="checked">{{ place.main.temp| kelvinToCelsius | number:1 }}°C</h1>
+            <h1 class="temp detail" ng-hide="!checked">{{place.main.temp | kelvinToCelsius | toFarenheit |
+              number:1}}°F</h1>
+            <br><span ng-hide="checked">min: {{ place.main.temp_min| kelvinToCelsius | number:1 }}°C</span>
+            <br><span ng-hide="!checked">min: {{ place.main.temp_min | kelvinToCelsius | toFarenheit | number:1}}°F</span>
+            <br><span ng-hide="checked">max: {{ place.main.temp_max| kelvinToCelsius | number:1 }}°C</span>
+            <br><span ng-hide="!checked">max: {{ place.main.temp_max | kelvinToCelsius | toFarenheit | number:1}}°F</span>
+            <br><span ng-hide="checked">Wind Speed: {{ place.wind.speed | number: 2}} km/h</span>
+            <br><span ng-hide="!checked">Wind Speed: {{ place.wind.speed * 0.621371 | number: 2}} mph</span>
+          </div>
+        </div>
+        <div class="row weathercard" style="padding-left: 20px; margin-top: 150px; margin-left: -20px;">
+          <h3>3-day Forecast</h3>
+          <div class="col-md-4" style="text-align: center" ng-repeat="forecast in forecasts">
+            <p>{{forecast.name}}</p>
+            <br><span ng-hide="checked">min: {{ forecast.temp.min| kelvinToCelsius | number:1 }}°C</span>
+            <br><span ng-hide="!checked">min: {{ forecast.temp.min | kelvinToCelsius | toFarenheit | number:1}}°F</span>
+            <br><span ng-hide="checked">max: {{ forecast.temp.max| kelvinToCelsius | number:1 }}°C</span>
+            <br><span ng-hide="!checked">max: {{ forecast.temp.max | kelvinToCelsius | toFarenheit | number:1}}°F</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="weathercard">
+      Json Data for city
+      {{  wdc.weather  | json }} <br>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,158 @@
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  less dependencies when defined in the bower.json of your dependencies
+ */
+// bower:less
+// endbower
+
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap/less/variables.less
+ */
+@navbar-inverse-link-color: #5AADBB;
+@icon-font-path: '../../bower_components/bootstrap/fonts/';
+
+html {
+  background-image: url(/src/assets/images/SeattlerSkyline01.jpg);
+  background: url(/src/assets/images/SeattlerSkyline01.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.body{
+  background-image: url(/src/assets/images/SeattlerSkyline01.jpg);
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+[multiplication-table] > div {
+  display:block;
+}
+
+[multiplication-table] > div > div{
+  display:inline-block;
+  border:1px solid #ddd;
+  width:100px;
+  line-height:100px;
+  text-align:center;
+}
+
+.weather-buffer {
+  margin-top:20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin: 10px auto;
+  padding: 0.2em 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+
+.weathercard{
+  height: 525px;
+  background: #fff;
+  border-color: darkblue;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";       /* IE 8 */
+  filter: alpha(opacity=85);  /* IE 5-7 */
+  -moz-opacity: 0.85;          /* Netscape */
+  -khtml-opacity: 0.85;        /* Safari 1.x */
+  opacity: 0.85;               /* Good browsers */
+  -moz-box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black;
+  border-spacing: 20px;
+  -webkit-border-vertical-spacing: 10px;
+  margin: 10px auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px){
+  img.bg {
+    left: 50%;
+    margin-left: -512px; }
+}
+
+#page-wrap {
+  position: relative;
+  width: 95%;
+  margin: 50px auto;
+  padding: 20px;
+  -moz-box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black; }
+
+p {
+  font: 15px/2 Georgia, Serif;
+  margin: 0 0 30px 0;
+  text-indent: 40px;
+  }
+
+.singleview{
+
+}
+.weather-detail{
+  height: 525px;
+  background: #fff;
+  border-color: darkblue;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";       /* IE 8 */
+  filter: alpha(opacity=85);  /* IE 5-7 */
+  -moz-opacity: 0.85;          /* Netscape */
+  -khtml-opacity: 0.85;        /* Safari 1.x */
+  opacity: 0.85;               /* Good browsers */
+  -moz-box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black;
+  border-spacing: 20px;
+  -webkit-border-vertical-spacing: 10px;
+  margin: 10px auto;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your less files automatically
+ */
+// injector
+// endinjector

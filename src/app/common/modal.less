@@ -1,0 +1,132 @@
+.modal-dialog {
+//	width: 648px;
+	margin-top: 100px;
+
+	.modal-content {
+
+//		padding: 100px 60px 60px;
+		.rounded(0);
+
+		.logo-icon {
+			float: left;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+
+		.close-x {
+			float: right;
+			position: absolute;
+			right: 50px;
+			top: 50px;
+			cursor: pointer;
+			text-align: right;
+			width: 20px;
+			height: 20px;
+
+			i {
+				float: right;
+			}
+		}
+
+		.modal-header {
+			border-bottom: 0;
+//			padding: 0;
+			margin-bottom: 50px;
+
+			h2, h3 {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.modal-body {
+//			padding: 0;
+		}
+
+		.modal-footer {
+			border-top: 0;
+			padding: 0;
+			text-align: left;
+
+			.buttons-container {
+				margin-bottom: 0;
+			}
+
+			.button-box {
+				margin-right: 30px;
+
+				&:last-of-type {
+					margin-right: 0;
+				} 
+			}
+
+		}
+	}	
+	
+
+	@media @screen-sm {
+		width: 626px;
+		margin-top: 80px;
+
+		.modal-content {
+//			padding:  80px 50px 50px;
+
+			.logo-icon {
+				top: 40px;
+				left: 40px;
+			}
+
+			.close-x {
+				top: 40px;
+				right: 40px;
+			}			
+
+		}
+	}
+	
+	@media @screen-xs {
+		width: auto;
+		margin: 60px 20px 0;
+
+		.modal-content {
+	//		padding: 60px 25px 40px;
+
+			.logo-icon {
+				top: 30px;
+				left: 30px;
+			}
+
+			.close-x {
+				top: 30px;
+				right: 30px;
+			}
+
+			.modal-header {
+				margin-bottom: 40px;
+			}
+
+			.modal-footer {
+
+				.button-box {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.modal-big {
+
+	.modal-dialog {
+		width: auto;
+
+		.modal-content {
+			padding: 100px 0 60px;
+
+			.container {
+				padding: 0 15px;
+			}
+		}
+	}
+}

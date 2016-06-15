@@ -1,0 +1,223 @@
+.carret-icon {
+	font-size: 16px;
+}
+
+.icon-margin {
+	padding-left: 30px;
+
+	i {
+		float: left;
+		margin-left: -30px;
+	}
+
+	&.single-line {
+		padding-top: 4px;
+
+		i {
+			margin-top: -4px;
+		}
+	}
+}
+
+//Default Icons:
+.def {
+
+	color: @gray;
+	
+	&.fa-info-circle {	font-size: 18px; }
+	&.fa-camera {		font-size: 24px; }
+	&.fa-calendar {		font-size: 24px; }
+	&.fa-repeat {		font-size: 18px; }
+	&.fa-share-alt {	font-size: 18px; }
+	&.fa-star {			font-size: 18px; color: @brand-magenta }
+	&.fa-star-half-o {	font-size: 18px; color: @brand-magenta }
+	&.fa-star-o {		font-size: 18px; color: @brand-magenta }
+	&.fa-barcode {		font-size: 24px; }
+	&.fa-comments {		font-size: 20px; }
+	&.fa-plus {			font-size: 16px; }
+	&.fa-minus {		font-size: 16px; }
+	&.fa-times {		font-size: 16px; }
+	&.fa-files-o {		font-size: 18px; }
+	&.fa-lock {			font-size: 18px; color: @brand-magenta }
+	&.fa-unlock-alt {	font-size: 18px; }
+	&.fa-map-marker {	font-size: 18px; }
+	&.fa-sign-in {		font-size: 18px; }
+	&.fa-bars {			font-size: 18px; }
+	&.fa-check {		font-size: 16px; color: @green }
+	&.fa-exclamation-circle{	font-size: 24px; color: @red }
+	&.fa-flag {			font-size: 20px; color: @brand-magenta }
+	&.fa-bar-chart {	font-size: 22px; }
+	&.fa-dashboard {	font-size: 20px; }
+	&.fa-chain  {		font-size: 20px; }
+	&.fa-download {		font-size: 20px; }
+	&.fa-gear  {		font-size: 23px; }
+	&.fa-angle-left {	font-size: 24px; }
+	&.fa-close {		font-size: 16px; }
+	&.fa-navicon {		font-size: 22px; color: @brand-magenta }
+	&.fa-angle-right {	font-size: 24px; color: @gray-dark }
+	&.fa-angle-down {	font-size: 24px; color: @gray-dark }
+	&.fa-angle-up {		font-size: 24px; color: @brand-magenta }
+	&.fa-caret-down {	font-size: 14px; color: @gray-dark }
+	&.fa-search {		font-size: 17px; }
+	&.fa-pencil {		font-size: 20px; }
+	&.fa-filter {		font-size: 20px; }
+}
+
+
+/*=============== Color icons ===============*/
+.co-icon[class^="color-swatch-"],
+.co-icon[class*="color-swatch-"] {
+	display: inline-block;
+	vertical-align: middle;
+	height: 23px;
+	width: 23px;
+	margin-right: 10px;
+	.rounded(23px);
+}
+.color-swatch-black {
+	background-color: #000;
+}
+.color-swatch-white {
+	background-color: #FFF;
+	border: 1px solid #C8C8C8;
+}
+.color-swatch-silver {
+	background-color: #C8C8C8;
+}
+.color-swatch-gold {
+	background-color: #CBA01B;
+}
+.color-swatch-pink {
+	background-color: #E2308B;
+}
+.color-swatch-blue {
+	background-color: #15529C;
+}
+.color-swatch-champagne {
+	background-color: #CDCDCD;
+}
+.color-swatch-sf-purple {
+	background-color: #6c9cd2;
+}
+.color-swatch-green {
+	background-color: #6bc269;
+}
+
+.color-swatch-space {
+	background-color: #535b61;
+}
+
+
+//Custom Icons
+
+.t-icon {
+	background: url('@{common-path}/img/icons/Rebellion_SpriteSheet_v3_022415_AL.png') no-repeat;
+	display: inline-block;
+	line-height: inherit;
+	vertical-align: middle;
+}
+
+.t-icon-certified-pre-owned {
+	background-position: -89px -26px;
+	height: 25px;
+	width: 17px;
+}
+
+.t-icon-share-continue-sharing {
+	background-position: -89px -162px;
+	height: 25px;
+	width: 17px;
+}
+
+.t-icon-share-set-autopay {
+	background-position: -81px -252px;
+	height: 25px;
+	width: 25px;
+}
+
+.t-icon-edit-autopay {
+	background-position: -84px -203px;
+	height: 25px;
+	width: 25px;
+}
+
+.t-icon-logo {
+	background-position: -189px -72px;
+	height: 20px;
+	width: 38px;
+}
+
+.t-icon-logo-magenta {
+	background-position: -254px -70px;
+	height: 25px;
+	width: 47px;
+}
+
+.t-icon-cart-0 {
+	background-position: -195px -121px; width: 32px; height: 24px;
+}
+
+.t-icon-cart-0-magenta {
+	background-position: -254px -115px; width: 36px; height: 36px;
+}
+
+.t-icon-cart-1 {
+	background-position: -195px -164px; width: 32px; height: 24px;
+}
+
+.t-icon-cart-1-magenta {
+	background-position: -253px -157px; width: 36px; height: 36px;
+}
+
+.t-icon-cart-2 {
+	background-position: -195px -210px; width: 32px; height: 24px;
+}
+
+.t-icon-cart-2-magenta {
+	background-position: -253px -203px; width: 36px; height: 36px;
+}
+
+.t-icon-cart-3 {
+	background-position: -195px -259px; width: 32px; height: 24px;
+}
+.t-icon-cart-3-magenta {
+	background-position: -254px -253px; width: 37px; height: 36px;
+}
+
+.t-icon[class^="t-icon-card-"],
+.t-icon[class*="t-icon-card-"] {
+	display: inline-block;
+	height: 20px;
+	line-height: inherit;
+	vertical-align: middle;
+	width: 31px;
+}
+
+.t-icon-card-visa {
+	background-position: -27px -376px;
+}
+
+.t-icon-card-master {
+	background-position: -82px -376px;
+}
+.t-icon-card-express {
+	background-position: -137px -376px;
+}
+
+.t-icon-card-discover {
+	background-position: -192px -376px;
+}
+.t-icon-card-star {
+	background-position: -254px -376px;
+}
+
+.t-icon-card-pulse {
+	background-position: -309px -376px;
+}
+.t-icon-card-accer {
+	background-position: -368px -376px;
+}
+
+.t-icon-card-nyce {
+	background-position: -430px -376px;
+}

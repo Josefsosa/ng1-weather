@@ -1,0 +1,23 @@
+.nav-tabs {
+	> li {
+		> a {
+			color:@gray-dark;
+			.rounded(0);
+			
+			&:hover,
+			&:focus {
+				border: 0 none;
+				color: @gray-dark;
+				background-color: @white;
+			}
+		}
+		
+		&.active {
+			> a,
+			> a:hover,
+			> a:focus {
+				.rounded(0);
+			}
+		}
+	}
+}

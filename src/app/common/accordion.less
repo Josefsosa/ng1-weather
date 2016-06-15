@@ -1,0 +1,89 @@
+#accordion, .accordion {
+
+	.panel {
+		.box-shadow(none);
+		.rounded(0);
+		background-color: transparent;
+		border-style: none none solid;
+		border-color: @item-border;
+		margin-bottom: 0;
+
+		&:last-of-type {
+			border-style: none;
+		}
+
+		&.open {
+
+			> .panel-heading {
+
+				.icon-carret-s-d-darkgray {
+					background-position: -350px -109px;
+				}
+
+				.to-magenta {
+					color: @brand-magenta;
+				}
+			}
+		}
+	}
+	
+	.panel-default, .panel-heading {
+        background: none repeat scroll 0px 0px white;
+        border-left: medium none;
+        border-right: medium none;
+        border-radius: 0px;
+        border-collapse: collapse;
+        box-shadow: none;
+    }
+
+	.panel-default {
+
+		>.panel-heading {
+			background-color: transparent;
+			border: 0 none;
+			color: inherit;
+
+			+.panel-collapse {
+
+				>.panel-body {
+					border: 0 none;
+				}
+			}
+		}
+	}
+
+	.panel-heading {
+		padding: 0 0 0 0;
+	}
+
+	.panel-body {
+		padding: 15px 0 0 0;
+	}
+	
+	.accordion-text {
+        font-size: 16px;
+        font-weight: 200;
+        color: @gray-dark;
+        padding: 0px;
+    }
+    .icon-sprite-image(@style) {
+        background: url("../images/mega-icon-sprite.png") @style;
+        display: inline-block;
+        height: 20px;
+        overflow: hidden;
+        vertical-align: middle;
+        width: 18px;
+        margin-top: 28px;
+        margin-right: 5px;
+    }
+    .icon-down {
+        .icon-sprite-image(no-repeat scroll -333px -105px);
+    }
+    .icon-up {
+        .icon-sprite-image(no-repeat scroll -350px -105px);
+    }
+}
+
+.click-span{
+	cursor: pointer;
+}
